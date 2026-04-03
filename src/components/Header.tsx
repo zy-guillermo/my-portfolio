@@ -7,8 +7,8 @@ import ThemeToggleButton from "./ThemeToggleButton";
 import HeartButton from "./HeartButton";
 
 const nav = [
-  { href: "#sdet-projects", label: "SDET Projects" },
-  { href: "#web-projects", label: "Web Projects" },
+  { href: "#sdet-projects", label: "SDET" },
+  { href: "#web-projects", label: "Web" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];

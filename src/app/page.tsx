@@ -14,10 +14,6 @@ import {
   webProjects,
 } from "@/data/portfolio";
 
-function scrollToContact() {
-  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-}
-
 export default function Home() {
   return (
     <>
@@ -65,42 +61,12 @@ export default function Home() {
                   On the side, I work as a freelance web developer, creating
                   clean, modern, and functional websites for clients.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href={CV_PATH}
-                    download
-                    className="craftz-btn-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-[#319795] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0e7db] dark:focus-visible:ring-offset-[#202023]"
-                  >
-                    <svg
-                      className="h-4 w-4 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    Download CV
-                  </a>
-                  <button
-                    type="button"
-                    onClick={scrollToContact}
-                    className="craftz-btn-outline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#319795] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0e7db] dark:focus-visible:ring-offset-[#202023]"
-                  >
-                    Contact Me
-                  </button>
-                </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        <Section id="sdet-projects" title="Projects I worked on as an SDET">
+        <Section id="sdet-projects" title="SDET Projects">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {sdetProjects.map((project) => (
               <Card
@@ -113,7 +79,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="web-projects" title="Projects I created as a Web Developer">
+        <Section id="web-projects" title="Web Projects">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {webProjects.map((project) => (
               <Card
@@ -248,6 +214,46 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="craftz-bg-teal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full">
+                      <svg
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        aria-hidden
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M2 9h4v12H2z"
+                        />
+                        <circle cx="4" cy="4" r="2" strokeWidth={2} />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-800 dark:text-white/90">
+                        LinkedIn
+                      </p>
+                      <a
+                        href="https://www.linkedin.com/in/zyguillermo/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="craftz-link underline"
+                      >
+                        Zy Guillermo
+                      </a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
               <div>
@@ -269,12 +275,25 @@ export default function Home() {
                     Send Email
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/zyguillermo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={CV_PATH}
+                    download
                     className="craftz-btn-outline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#319795] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0e7db] dark:focus-visible:ring-offset-[#202023]"
                   >
-                    LinkedIn
+                    <svg
+                      className="mr-2 h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    Download CV
                   </a>
                 </div>
               </div>
