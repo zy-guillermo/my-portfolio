@@ -7,6 +7,8 @@ import {
   Laptop,
 } from "lucide-react";
 
+const ASSET_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const HERO_TAGLINE =
   "SDET with 5 years of experience and a passion for clean web experiences.";
 
@@ -30,30 +32,30 @@ export const sdetProjects: ProjectItem[] = [
     title: "Axos Bank",
     description:
       "Modernized automation by migrating Appium C# to Testim JS, expanding coverage, and leading Playwright automation for the new web app.",
-    logo: "/axos.jpg",
+    logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
     title: "Australian Taxation Office",
     description: "Delivered functional & system testing automation and supported AWS modernization.",
-    logo: "/ato.png",
+    logo: `${ASSET_BASE_PATH}/ato.png`,
   },
   {
     title: "Inland Revenue Authority of Singapore",
     description:
       "Prepared UAT data using SQL and Postman, with automation tooling to streamline testing.",
-    logo: "/iras.jpg",
+    logo: `${ASSET_BASE_PATH}/iras.jpg`,
   },
   {
     title: "Ciergio",
     description:
       "Led end-to-end QA and introduced automation to reduce regression effort.",
-    logo: "/ciergio.png",
+    logo: `${ASSET_BASE_PATH}/ciergio.png`,
   },
   {
     title: "Ahente",
     description:
       "Performed full QA for web & mobile and helped establish automation-friendly testing practices.",
-    logo: "/ahente.png",
+    logo: `${ASSET_BASE_PATH}/ahente.png`,
   },
 ];
 
@@ -69,7 +71,7 @@ export const webProjects: ProjectItem[] = [
     title: "Next project?",
     description:
       "Want to give me your next website? Let’s build something fun — and ship it.",
-    logo: "/fallback.png",
+    logo: `${ASSET_BASE_PATH}/fallback.png`,
   },
 ];
 
@@ -206,4 +208,4 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-export const CV_PATH = "/CV_zyguillermo.pdf" as const;
+export const CV_PATH = `${ASSET_BASE_PATH}/CV_zyguillermo.pdf` as const;

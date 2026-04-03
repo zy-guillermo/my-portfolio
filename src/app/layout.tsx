@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { M_PLUS_Rounded_1c } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -32,9 +31,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <Script id="portfolio-theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
+        <script
+          id="portfolio-theme-init"
+          // Inline script runs immediately when the HTML is parsed.
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
       </head>
       <body className={`min-h-full flex flex-col ${mPlusRounded.className}`}>
         <ThemeProvider>{children}</ThemeProvider>
