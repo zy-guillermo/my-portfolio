@@ -13,12 +13,9 @@ export default function HeartButton({ className }: HeartButtonProps) {
   const [pending, setPending] = useState(false);
   const [bump, setBump] = useState(0);
 
-  const apiBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const heartsApiUrl = `${apiBase}/api/hearts`;
-
   useEffect(() => {
     let cancelled = false;
-    fetch(heartsApiUrl)
+    fetch("/api/hearts")
       .then((r) => r.json())
       .then((data) => {
         if (!cancelled) setCount(Number(data?.count ?? 0));
@@ -29,20 +26,18 @@ export default function HeartButton({ className }: HeartButtonProps) {
     return () => {
       cancelled = true;
     };
-  }, [heartsApiUrl]);
+  }, []);
 
   const onClick = async () => {
     if (pending) return;
     setPending(true);
     try {
-      const r = await fetch(heartsApiUrl, { method: "POST" });
+      const r = await fetch("/api/hearts", { method: "POST" });
       const data = await r.json();
       setCount(Number(data?.count ?? count + 1));
       setBump((n) => n + 1);
     } catch {
-      // GitHub Pages can't run API routes, so best-effort increment locally.
-      setCount((c) => c + 1);
-      setBump((n) => n + 1);
+      // Best-effort: keep UI responsive even if API fails.
     } finally {
       setPending(false);
     }

@@ -35,7 +35,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
               >
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero.jpg`}
+                  src="/hero.jpg"
                   alt="Zy Guillermo"
                   className="h-full w-full object-cover"
                 />

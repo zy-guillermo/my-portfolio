@@ -28,12 +28,13 @@ function applyClass(theme: PortfolioTheme) {
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<PortfolioTheme>(() => {
-    if (typeof window === "undefined") return "light";
+    // Default to dark so first paint matches the pre-interactive script.
+    if (typeof window === "undefined") return "dark";
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      return raw === "dark" || raw === "light" ? raw : "light";
+      return raw === "light" ? "light" : "dark";
     } catch {
-      return "light";
+      return "dark";
     }
   });
 

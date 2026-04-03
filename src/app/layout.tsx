@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     "Portfolio of Zymon Miko D. Guillermo, Software Development Engineer in Test with web development experience.",
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('portfolio-theme');if(t==='dark'){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`;
+// Default to dark on first visit (when no localStorage value exists).
+const themeInitScript = `(function(){try{var t=localStorage.getItem('portfolio-theme');if(t==='light'){document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default function RootLayout({
   children,

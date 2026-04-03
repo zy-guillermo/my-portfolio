@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { CatIcon } from "@/components/icons/CatIcon";
 import ThemeToggleButton from "./ThemeToggleButton";
-import HeartButton from "./HeartButton";
 
 const nav = [
   { href: "#sdet-projects", label: "SDET" },
@@ -73,7 +72,8 @@ const Header = () => {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-0">
-          <HeartButton className="mr-2" />
+          {/* Temporarily disabled pending domain/backend release */}
+          {/* <HeartButton className="mr-2" /> */}
           <ThemeToggleButton />
 
           <div className="ml-2 md:hidden">
