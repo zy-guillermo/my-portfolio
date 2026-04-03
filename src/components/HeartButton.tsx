@@ -37,7 +37,9 @@ export default function HeartButton({ className }: HeartButtonProps) {
       setCount(Number(data?.count ?? count + 1));
       setBump((n) => n + 1);
     } catch {
-      // Best-effort: keep UI responsive even if API fails.
+      // GitHub Pages can't run API routes, so best-effort increment locally.
+      setCount((c) => c + 1);
+      setBump((n) => n + 1);
     } finally {
       setPending(false);
     }
