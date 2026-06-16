@@ -51,11 +51,11 @@ export default function Home() {
                   Zy Guillermo
                 </h2>
                 <p className="mb-4 text-gray-700 dark:text-white/80">
-                  Software Engineer (SDET / Developer)
+                  Software Engineer (Sr. SDET / Technical Lead / Developer)
                 </p>
                 <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-white/80">
-                  Software Engineer with 5 years of experience as an SDET,
-                  specializing in building automation
+                  Software Engineer with 5+ years of experience as a Sr. SDET /
+                  Technical Lead, specializing in building automation
                   solutions.
                   <br />
                   On the side, I work as a freelance web developer, creating
@@ -70,8 +70,9 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {sdetProjects.map((project) => (
               <Card
-                key={project.title}
+                key={project.id}
                 title={project.title}
+                role={project.role}
                 description={project.description}
                 logo={project.logo}
               />
@@ -83,7 +84,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {webProjects.map((project) => (
               <Card
-                key={project.title}
+                key={project.id}
                 title={project.title}
                 description={project.description}
                 link={project.link}

@@ -10,10 +10,12 @@ import {
 const ASSET_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const HERO_TAGLINE =
-  "SDET with 5 years of experience and a passion for clean web experiences.";
+  "Senior SDET / Technical Lead with 5+ years of experience and a passion for clean web experiences.";
 
 export type ProjectItem = {
+  id: string;
   title: string;
+  role?: string;
   description: string;
   logo: string;
   link?: string;
@@ -29,29 +31,43 @@ export type SkillGroup = {
 
 export const sdetProjects: ProjectItem[] = [
   {
+    id: "axos-sdet",
     title: "Axos Bank",
+    role: "Sr. SDET",
     description:
-      "Modernized automation by migrating Appium C# to Testim JS, expanding coverage, and leading Playwright automation for the new web app.",
+      "Modernized automation by migrating Appium C# to Testim JS and expanding test coverage across platforms.",
     logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
+    id: "axos-tl",
+    title: "Axos Bank",
+    role: "Technical Lead",
+    description:
+      "Established the Playwright TypeScript framework for OLB 3.0 on OutSystems, leading the Testim-to-Playwright migration. Directed delivery end-to-end—reviews, standards, and team coordination—while mentoring engineers and shaping testing strategy.",
+    logo: `${ASSET_BASE_PATH}/axos.jpg`,
+  },
+  {
+    id: "ato",
     title: "Australian Taxation Office",
     description: "Delivered functional & system testing automation and supported AWS modernization.",
     logo: `${ASSET_BASE_PATH}/ato.png`,
   },
   {
+    id: "iras",
     title: "Inland Revenue Authority of Singapore",
     description:
       "Prepared UAT data using SQL and Postman, with automation tooling to streamline testing.",
     logo: `${ASSET_BASE_PATH}/iras.jpg`,
   },
   {
+    id: "ciergio",
     title: "Ciergio",
     description:
       "Led end-to-end QA and introduced automation to reduce regression effort.",
     logo: `${ASSET_BASE_PATH}/ciergio.png`,
   },
   {
+    id: "ahente",
     title: "Ahente",
     description:
       "Performed full QA for web & mobile and helped establish automation-friendly testing practices.",
@@ -61,6 +77,7 @@ export const sdetProjects: ProjectItem[] = [
 
 export const webProjects: ProjectItem[] = [
   {
+    id: "first-look",
     title: "First Look Publicity",
     description:
       "A full-service publicity and marketing agency that brings brands to life through strategic storytelling, impactful events, and performance-driven digital campaigns.",
@@ -68,6 +85,7 @@ export const webProjects: ProjectItem[] = [
     logo: "https://www.1stlookpublicity.com/src/flp1.jpg",
   },
   {
+    id: "next-project",
     title: "Next project?",
     description:
       "Want to give me your next website? Let’s build something fun — and ship it.",
@@ -180,6 +198,10 @@ export const skills: SkillGroup[] = [
       {
         name: "Cursor AI",
         icon: "https://cdn.simpleicons.org/cursor/0078D4",
+      },
+      {
+        name: "Claude AI",
+        icon: "https://cdn.simpleicons.org/claude/D97757",
       },
       {
         name: "Visual Studio",

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 interface CardProps {
   title: string;
+  role?: string;
   description: string;
   logo?: string;
   link?: string;
@@ -12,7 +13,7 @@ interface CardProps {
 const cardClass =
   "rounded-xl border border-white/80 bg-white/50 p-6 shadow-sm backdrop-blur-[10px] transition hover:shadow-md dark:border-white/10 dark:bg-white/10";
 
-const Card = ({ title, description, logo, link }: CardProps) => {
+const Card = ({ title, role, description, logo, link }: CardProps) => {
   const content = (
     <motion.div
       className={`${cardClass} cursor-pointer`}
@@ -32,6 +33,11 @@ const Card = ({ title, description, logo, link }: CardProps) => {
       )}
       <h3 className="mb-2 text-xl font-semibold text-gray-800 dark:text-white/90">
         {title}
+        {role ? (
+          <span className="block text-sm font-medium craftz-text-teal-accent">
+            {role}
+          </span>
+        ) : null}
       </h3>
       <p className="text-sm text-gray-700 dark:text-white/80">{description}</p>
     </motion.div>
