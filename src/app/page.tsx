@@ -8,7 +8,8 @@ import ScrollToTopRocket from "@/components/ScrollToTopRocket";
 import { motion } from "framer-motion";
 import {
   CV_PATH,
-  HERO_TAGLINE,
+  HERO_QUOTE,
+  HERO_QUOTE_SOURCE,
   sdetProjects,
   skills,
   webProjects,
@@ -23,9 +24,12 @@ export default function Home() {
         <VoxelCat />
         <section id="home" className="px-5 py-12 sm:px-7">
           <div className="mx-auto max-w-2xl">
-            <div className="mb-6 rounded-lg craftz-glass-panel text-[16px] leading-6 font-medium text-gray-800 dark:text-white/90">
-              {HERO_TAGLINE}
-            </div>
+            <blockquote className="craftz-quote-panel mb-6">
+              <p className="craftz-quote-text">&ldquo;{HERO_QUOTE}&rdquo;</p>
+              <footer className="craftz-quote-source">
+                — {HERO_QUOTE_SOURCE}
+              </footer>
+            </blockquote>
 
             <div className="flex flex-col gap-8 md:flex-row md:items-start">
               <motion.div
@@ -51,15 +55,16 @@ export default function Home() {
                   Zy Guillermo
                 </h2>
                 <p className="mb-4 text-gray-700 dark:text-white/80">
-                  Software Engineer (Sr. SDET / Technical Lead / Developer)
+                  Software Engineer
+                  <span className="mt-0.5 block">
+                    (Sr. SDET / Technical Lead / Developer)
+                  </span>
                 </p>
                 <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-white/80">
                   Software Engineer with 5+ years of experience as a Sr. SDET /
                   Technical Lead, specializing in building automation
-                  solutions.
-                  <br />
-                  On the side, I work as a freelance web developer, creating
-                  clean, modern, and functional websites for clients.
+                  solutions. On the side, I work as a freelance web developer,
+                  creating clean, modern, and functional websites for clients.
                 </p>
               </motion.div>
             </div>

@@ -9,8 +9,10 @@ import {
 
 const ASSET_BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-export const HERO_TAGLINE =
-  "Senior SDET / Technical Lead with 5+ years of experience and a passion for clean web experiences.";
+export const HERO_QUOTE =
+  "I'm the type of person that if you ask me a question and I don't know the answer, I'm gonna tell you that I don't know. But I bet you what, I know how to find the answer and I will find the answer.";
+
+export const HERO_QUOTE_SOURCE = "The Pursuit of Happyness";
 
 export type ProjectItem = {
   id: string;
@@ -31,19 +33,19 @@ export type SkillGroup = {
 
 export const sdetProjects: ProjectItem[] = [
   {
+    id: "axos-tl",
+    title: "Axos Bank",
+    role: "Technical Lead",
+    description:
+      "Established the Playwright TypeScript framework for OLB 3.0. Led the team through test creation and the Testim-to-Playwright migration.",
+    logo: `${ASSET_BASE_PATH}/axos.jpg`,
+  },
+  {
     id: "axos-sdet",
     title: "Axos Bank",
     role: "Sr. SDET",
     description:
       "Modernized automation by migrating Appium C# to Testim JS and expanding test coverage across platforms.",
-    logo: `${ASSET_BASE_PATH}/axos.jpg`,
-  },
-  {
-    id: "axos-tl",
-    title: "Axos Bank",
-    role: "Technical Lead",
-    description:
-      "Established the Playwright TypeScript framework for OLB 3.0 on OutSystems, leading the Testim-to-Playwright migration. Directed delivery end-to-end—reviews, standards, and team coordination—while mentoring engineers and shaping testing strategy.",
     logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
