@@ -39,9 +39,9 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
               >
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero.jpg`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero2.png`}
                   alt="Zy Guillermo"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-[center_25%]"
                 />
               </motion.div>
 
