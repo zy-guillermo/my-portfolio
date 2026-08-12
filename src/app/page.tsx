@@ -56,14 +56,12 @@ export default function Home() {
                 </h2>
                 <p className="mb-4 text-gray-700 dark:text-white/80">
                   Software Engineer
-                  <span className="mt-0.5 block">
-                    (Sr. SDET / Technical Lead / Developer)
-                  </span>
+                  <span className="mt-0.5 block">(Lead SDET / Developer)</span>
                 </p>
                 <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-white/80">
-                  Software Engineer with 5+ years of experience as a Sr. SDET /
-                  Technical Lead, specializing in building automation
-                  solutions. On the side, I work as a freelance web developer,
+                  Software Engineer with 5+ years of experience as a Lead SDET,
+                  specializing in building automation solutions and team
+                  management. On the side, I work as a freelance web developer,
                   creating clean, modern, and functional websites for clients.
                 </p>
               </motion.div>
@@ -77,7 +75,6 @@ export default function Home() {
               <Card
                 key={project.id}
                 title={project.title}
-                role={project.role}
                 description={project.description}
                 logo={project.logo}
               />

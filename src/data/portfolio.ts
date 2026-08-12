@@ -17,7 +17,6 @@ export const HERO_QUOTE_SOURCE = "The Pursuit of Happyness";
 export type ProjectItem = {
   id: string;
   title: string;
-  role?: string;
   description: string;
   logo: string;
   link?: string;
@@ -33,19 +32,10 @@ export type SkillGroup = {
 
 export const sdetProjects: ProjectItem[] = [
   {
-    id: "axos-tl",
+    id: "axos",
     title: "Axos Bank",
-    role: "Technical Lead",
     description:
-      "Established the Playwright TypeScript framework for OLB 3.0. Led the team through test creation and the Testim-to-Playwright migration.",
-    logo: `${ASSET_BASE_PATH}/axos.jpg`,
-  },
-  {
-    id: "axos-sdet",
-    title: "Axos Bank",
-    role: "Sr. SDET",
-    description:
-      "Modernized automation by migrating Appium C# to Testim JS and expanding test coverage across platforms.",
+      "Modernized automation from Appium to Testim and Playwright for OLB 3.0, expanding coverage while leading the team through framework migration.",
     logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
