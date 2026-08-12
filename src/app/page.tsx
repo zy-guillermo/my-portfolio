@@ -33,7 +33,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-8 md:flex-row md:items-start">
               <motion.div
-                className="relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-lg border-2 border-white/80 dark:border-white/30 md:max-w-[280px]"
+                className="relative aspect-[4/5] w-full shrink-0 overflow-hidden rounded-lg border-2 border-white/80 dark:border-white/30 md:max-w-[280px]"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -41,7 +41,7 @@ export default function Home() {
                 <img
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero2.png`}
                   alt="Zy Guillermo"
-                  className="h-full w-full object-cover object-[center_25%]"
+                  className="h-full w-full object-cover"
                 />
               </motion.div>
 
