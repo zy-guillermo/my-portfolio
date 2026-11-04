@@ -19,6 +19,7 @@ export type ProjectItem = {
   title: string;
   description: string;
   logo: string;
+  logoBackground?: string;
   link?: string;
 };
 
@@ -42,8 +43,9 @@ export const sdetProjects: ProjectItem[] = [
     id: "axos-sentinel",
     title: "Axos Bank · Sentinel",
     description:
-      "Created Sentinel, a QE agent that reports bugs, retests them, and tests PBIs, with integrations to the Playwright framework, Azure DevOps, and Linear. First initiative of its kind in the QE organization.",
-    logo: `${ASSET_BASE_PATH}/axos.jpg`,
+      "Created Sentinel, a QE agent that reports bugs, retests them, and tests PBIs, with integrations to the Playwright framework, Azure DevOps, Linear, and Figma. First initiative of its kind in the QE organization.",
+    logo: `${ASSET_BASE_PATH}/sentinel-knight-cutout.png`,
+    logoBackground: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
     id: "ato",
@@ -180,11 +182,15 @@ export const skills: SkillGroup[] = [
         name: "Linear",
         icon: "https://cdn.simpleicons.org/linear/5E6AD2",
       },
+      {
+        name: "GitHub",
+        icon: `${ASSET_BASE_PATH}/github.png`,
+      },
     ],
     icon: GitBranch,
   },
   {
-    category: "IDEs & editors",
+    category: "AI & IDEs",
     items: [
       {
         name: "VS Code",
@@ -201,6 +207,22 @@ export const skills: SkillGroup[] = [
       {
         name: "Visual Studio",
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/visualstudio/visualstudio-plain.svg",
+      },
+      {
+        name: "Figma",
+        icon: `${ASSET_BASE_PATH}/figma.png`,
+      },
+      {
+        name: "GitHub Copilot",
+        icon: `${ASSET_BASE_PATH}/copilot.png`,
+      },
+      {
+        name: "ChatGPT",
+        icon: `${ASSET_BASE_PATH}/chatgpt.png`,
+      },
+      {
+        name: "Microsoft Copilot",
+        icon: `${ASSET_BASE_PATH}/microsoft-copilot.png`,
       },
     ],
     icon: Laptop,

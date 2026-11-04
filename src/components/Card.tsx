@@ -6,13 +6,14 @@ interface CardProps {
   title: string;
   description: string;
   logo?: string;
+  logoBackground?: string;
   link?: string;
 }
 
 const cardClass =
   "rounded-xl border border-white/80 bg-white/50 p-6 shadow-sm backdrop-blur-[10px] transition hover:shadow-md dark:border-white/10 dark:bg-white/10";
 
-const Card = ({ title, description, logo, link }: CardProps) => {
+const Card = ({ title, description, logo, logoBackground, link }: CardProps) => {
   const content = (
     <motion.div
       className={`${cardClass} cursor-pointer`}
@@ -22,11 +23,27 @@ const Card = ({ title, description, logo, link }: CardProps) => {
       viewport={{ once: true }}
     >
       {logo && (
-        <div className="mb-4 flex h-16 w-16 items-center justify-center">
+        <div
+          className={`relative mb-4 h-16 w-16 ${
+            logoBackground ? "" : "flex items-center justify-center"
+          }`}
+        >
+          {logoBackground && (
+            <img
+              src={logoBackground}
+              alt=""
+              aria-hidden
+              className="absolute left-0 top-0 z-0 h-9 w-9 rounded-lg object-cover opacity-90"
+            />
+          )}
           <img
             src={logo}
             alt={`${title} logo`}
-            className="h-full w-full object-contain"
+            className={
+              logoBackground
+                ? "absolute bottom-0 right-0 z-10 h-10 w-10 object-contain"
+                : "h-full w-full object-contain"
+            }
           />
         </div>
       )}

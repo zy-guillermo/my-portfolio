@@ -197,6 +197,11 @@ body {
   color: #81e6d9;
 }
 
+.dark img[alt="GitHub"],
+.dark img[alt="ChatGPT"] {
+  filter: invert(1);
+}
+
 .voxel-cat canvas {
   background: transparent !important;
   display: block;

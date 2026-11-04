@@ -77,6 +77,7 @@ export default function Home() {
                 title={project.title}
                 description={project.description}
                 logo={project.logo}
+                logoBackground={project.logoBackground}
               />
             ))}
           </div>
