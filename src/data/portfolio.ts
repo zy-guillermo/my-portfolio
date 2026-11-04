@@ -35,7 +35,14 @@ export const sdetProjects: ProjectItem[] = [
     id: "axos",
     title: "Axos Bank",
     description:
-      "Modernized automation from Appium to Testim and Playwright for OLB 3.0, expanding coverage while leading the team through framework migration.",
+      "Led Playwright automation for the functional team on the OLB 3.0 web application and the UDB 3.0 mobile application.",
+    logo: `${ASSET_BASE_PATH}/axos.jpg`,
+  },
+  {
+    id: "axos-sentinel",
+    title: "Axos Bank · Sentinel",
+    description:
+      "Created Sentinel, a QE agent that reports bugs, retests them, and tests PBIs, with integrations to the Playwright framework, Azure DevOps, and Linear. First initiative of its kind in the QE organization.",
     logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
@@ -94,10 +101,6 @@ export const skills: SkillGroup[] = [
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg",
       },
       {
-        name: "Cypress",
-        icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg",
-      },
-      {
         name: "Playwright",
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg",
       },
@@ -140,8 +143,8 @@ export const skills: SkillGroup[] = [
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
       },
       {
-        name: "SQL",
-        icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+        name: "SSMS",
+        icon: `${ASSET_BASE_PATH}/ssms.png`,
       },
       {
         name: "Git",
@@ -170,12 +173,12 @@ export const skills: SkillGroup[] = [
         icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
       },
       {
-        name: "nUnit",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Nunit_logo_250.png",
-      },
-      {
         name: "Azure DevOps",
         icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaf0noJnyGWX1IonIvgKccpswYwuNqAbYX4Q&s",
+      },
+      {
+        name: "Linear",
+        icon: "https://cdn.simpleicons.org/linear/5E6AD2",
       },
     ],
     icon: GitBranch,
@@ -216,6 +219,10 @@ export const skills: SkillGroup[] = [
       {
         name: "Automation frameworks",
         icon: "https://cdn-icons-png.freepik.com/512/17756/17756684.png",
+      },
+      {
+        name: "AI-DLC",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M34 10a22 22 0 1 1-16.2 7.2' fill='none' stroke='%2314b8a6' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M14 8v14h14' fill='none' stroke='%2314b8a6' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M34 24.5l2.4 6.6 6.8 1.6-6.8 1.6L34 41l-2.4-6.7-6.8-1.6 6.8-1.6L34 24.5z' fill='%23f59e0b'/%3E%3C/svg%3E",
       },
     ],
     icon: Zap,
