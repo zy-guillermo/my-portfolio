@@ -35,7 +35,7 @@ export const sdetProjects: ProjectItem[] = [
     id: "axos",
     title: "Axos Bank",
     description:
-      "Led Playwright automation for the functional team on the OLB 3.0 web application and the UDB 3.0 mobile application.",
+      "Led Playwright automation for the OLB 3.0 web application and the functional team of the UDB 3.0 mobile application.",
     logo: `${ASSET_BASE_PATH}/axos.jpg`,
   },
   {
